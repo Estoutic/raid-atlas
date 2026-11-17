@@ -1,0 +1,48 @@
+name: Prepare macOS release
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing release tag, matching VERSION (for example v0.10.2)
+        required: true
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: release-${{ inputs.tag }}
+  cancel-in-progress: false
+jobs:
+  package:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.tag }}
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+      - name: Validate version and release notes
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          VERSION=$(cat VERSION)
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          test "$RELEASE_TAG" = "v$VERSION"
+          test -f "docs/releases/$VERSION.md"
+          git show-ref --verify "refs/tags/$RELEASE_TAG"
+      - run: node --test tests/*.test.cjs
+      - run: node checks/exit-audit.cjs
+      - run: zsh package.sh
+      - name: Create draft with verified installer
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          VERSION=$(cat VERSION)
+          cp packaging/Установка.txt releases/INSTALL-RU.txt
+          gh release create "$RELEASE_TAG" --verify-tag --draft \
+            --title "Raid Atlas $VERSION — macOS" \
+            --notes-file "docs/releases/$VERSION.md" \
+            "releases/Raid-Atlas-$VERSION-mac-universal.dmg" \
+            "releases/Raid-Atlas-$VERSION-mac-universal.dmg.sha256" \
+            releases/INSTALL-RU.txt

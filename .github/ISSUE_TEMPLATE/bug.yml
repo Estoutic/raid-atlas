@@ -1,0 +1,26 @@
+name: Ошибка / Bug report
+description: Ошибка карты, задания, маршрута или приложения.
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Версия Raid Atlas и macOS
+      placeholder: 0.10.2, macOS 15.6.1, Apple Silicon
+    validations:
+      required: true
+  - type: input
+    id: map
+    attributes:
+      label: Локация и этаж / Map and floor
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Как повторить / Steps to reproduce
+      description: Что выбрали, чего ожидали, что получилось. Для маршрута — старт, задания и выход.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Скриншот и дополнительные сведения / Evidence
+      description: Можно приложить скриншот. Не публикуйте личные данные аккаунта.

@@ -12,7 +12,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, WKNavigationDelegate {
         let config=WKWebViewConfiguration();config.preferences.javaScriptCanOpenWindowsAutomatically=false
         if testReport != nil { config.websiteDataStore = .nonPersistent() }
         web=WKWebView(frame:.zero,configuration:config);web.navigationDelegate=self;web.setValue(false,forKey:"drawsBackground")
-        window=NSWindow(contentRect:NSRect(x:0,y:0,width:CommandLine.arguments.contains("--small") ? 1050 : 1380,height:CommandLine.arguments.contains("--small") ? 700 : 900),styleMask:[.titled,.closable,.miniaturizable,.resizable],backing:.buffered,defer:false);window.title="Raid Atlas 0.10.1 — PvE";window.minSize=NSSize(width:1050,height:700);window.backgroundColor=NSColor(red:0.07,green:0.10,blue:0.08,alpha:1);window.contentView=web;window.center();window.makeKeyAndOrderFront(nil);NSApp.activate(ignoringOtherApps:true)
+        window=NSWindow(contentRect:NSRect(x:0,y:0,width:CommandLine.arguments.contains("--small") ? 1050 : 1380,height:CommandLine.arguments.contains("--small") ? 700 : 900),styleMask:[.titled,.closable,.miniaturizable,.resizable],backing:.buffered,defer:false);window.title="Raid Atlas \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "") — PvE";window.minSize=NSSize(width:1050,height:700);window.backgroundColor=NSColor(red:0.07,green:0.10,blue:0.08,alpha:1);window.contentView=web;window.center();window.makeKeyAndOrderFront(nil);NSApp.activate(ignoringOtherApps:true)
         let root=Bundle.main.resourceURL!.appendingPathComponent("web",isDirectory:true)
         web.loadFileURL(root.appendingPathComponent("index.html"),allowingReadAccessTo:root)
     }

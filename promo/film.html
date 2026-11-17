@@ -1,0 +1,75 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Raid Atlas / Film source</title><style>html,body{margin:0;background:#080d14}canvas{display:block;width:100vw;height:auto}</style><canvas id="film" width="1920" height="1080" aria-label="Raid Atlas promo film"></canvas><script>
+const canvas=document.getElementById('film'),c=canvas.getContext('2d',{willReadFrequently:true}),W=1920,H=1080;
+const GOLD='#f3c553',WHITE='#f4f2ea',MUTED='#95a7bc',images={};
+const scenes=[
+ {at:0,end:4.5,key:'route',tag:'ЗНАКОМАЯ СИТУАЦИЯ?',lines:['Перестрелку пережил.','А выход-то где?'],sub:'Когда карта есть. А плана — нет.',type:'hook'},
+ {at:4.5,end:8,key:'route',tag:'RAID ATLAS',lines:['В рейд.','С планом.'],sub:'Твой атлас Escape from Tarkov PvE.',type:'brand'},
+ {at:8,end:13,key:'atlas',tag:'01 / ВЫБЕРИ ЛОКАЦИЮ',lines:['12 локаций.','Один атлас.'],sub:'12 локаций · объёмные карты · схемы этажей'},
+ {at:13,end:18,key:'tasks',tag:'02 / СОБЕРИ ЦЕЛИ',lines:['Несколько','заданий.','Один рейд.'],sub:'338 заданий PvE · отмечай выполненные этапы',focus:'panel'},
+ {at:18,end:22.5,key:'gear',tag:'03 / ПРОВЕРЬ СНАРЯЖЕНИЕ',lines:['Нужный ключ?','Уже в списке.'],sub:'Ключи, предметы и условия выбранных заданий',focus:'panel'},
+ {at:22.5,end:28,key:'search',tag:'04 / НАЙДИ НУЖНОЕ МЕСТО',lines:['Комната 306?','Знаем этаж.'],sub:'Поиск зданий и комнат · 17 векторных планов',focus:'search'},
+ {at:28,end:35,key:'route',tag:'05 / ПОСТРОЙ МАРШРУТ',lines:['Старт.','Цели.','Выход.'],sub:'До 10 целей · расчёт по схемам · два приоритета',focus:'map',note:'Маршруты приближённые. Проходимость проверяй по игре.'},
+ {at:35,end:41,key:'auto-exits',tag:'06 / ВЫБЕРИ ВЫХОД',lines:['Доступных','несколько.','План — один.'],sub:'Сравнение полного пути до отмеченных выходов',focus:'panel',note:'Доступность и условия выхода отметь по текущему рейду.'},
+ {at:41,end:47,key:'factory',tag:'07 / ПОСМОТРИ ПОД ДРУГИМ УГЛОМ',lines:['Завод.','В объёме.'],sub:'Поворот · масштаб · отдельные этажи',focus:'factory'},
+ {at:47,end:51,key:'manual',tag:'08 / НАМЕТЬ СВОЙ ПУТЬ',lines:['Твоя разведка.','Твой маршрут.'],sub:'Ручные точки: Лабиринт, Ледокол и Терминал',note:'Ручной план соединяет точки без обхода препятствий.'},
+ {at:51,end:55,key:'exits',tag:'БЕЗ СУЕТЫ ПЕРЕД РЕЙДОМ',lines:['Карты —','офлайн.','Отметки —','с тобой.'],sub:'Локальное сохранение заданий, выходов и планов',focus:'map'},
+ {at:55,end:60,key:'route',tag:'RAID ATLAS / macOS',lines:['Меньше поисков.','Больше плана.'],sub:'Скачай. Выбери цели. Выходи подготовленным.',type:'outro'}
+];
+window.scenesForExport=scenes;
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)),ease=v=>1-Math.pow(1-clamp(v),3);
+function round(x,y,w,h,r=18){c.beginPath();c.roundRect(x,y,w,h,r);}
+function text(t,x,y,size=24,color=WHITE,weight=500,align='left'){c.font=`${weight} ${size}px -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif`;c.fillStyle=color;c.textAlign=align;c.fillText(t,x,y);}
+function tracked(t,x,y,size=17,color=MUTED,spacing=4){c.font=`600 ${size}px 'Helvetica Neue', Arial`;c.fillStyle=color;for(const ch of t){c.fillText(ch,x,y);x+=c.measureText(ch).width+spacing;}}
+function line(x1,y1,x2,y2,color,width=1){c.beginPath();c.moveTo(x1,y1);c.lineTo(x2,y2);c.strokeStyle=color;c.lineWidth=width;c.stroke();}
+function bg(t){c.fillStyle='#080e17';c.fillRect(0,0,W,H);let g=c.createRadialGradient(1450,350,60,1400,450,1150);g.addColorStop(0,'#192e45');g.addColorStop(1,'#080e17');c.fillStyle=g;c.fillRect(0,0,W,H);c.save();c.globalAlpha=.15;for(let x=0;x<W;x+=80)line(x,0,x,H,'#526073');for(let y=0;y<H;y+=80)line(0,y,W,y,'#526073');c.restore();c.save();c.strokeStyle='#d4b75a18';c.lineWidth=2;c.beginPath();c.moveTo(900,1080);c.lineTo(1150,800);c.lineTo(1050,620);c.lineTo(1390,380);c.lineTo(1320,160);c.lineTo(1700,-70);c.stroke();c.restore();}
+function chrome(key,x,y,w,h,zoom=1,focus='center'){
+ const im=images[key];if(!im)return;
+ c.save();c.shadowColor='#000a';c.shadowBlur=55;c.shadowOffsetY=24;round(x,y,w,h,16);c.fillStyle='#101925';c.fill();c.restore();
+ c.save();round(x,y,w,h,16);c.clip();c.fillStyle='#162231';c.fillRect(x,y,w,32);
+ for(let i=0;i<3;i++){c.beginPath();c.arc(x+18+i*17,y+16,4.5,0,7);c.fillStyle=['#ef776e','#edc15e','#76be8b'][i];c.fill();}
+ text('Raid Atlas',x+w/2,y+22,13,'#b7c4d4',500,'center');c.textAlign='left';
+ const sy=y+32,sh=h-32,sw=w;let iw=im.width,ih=im.height,cropw=iw/zoom,croph=ih/zoom;
+ const fx=focus==='panel'?.96:focus==='search'?.39:focus==='map'?.38:.5;
+ const fy=focus==='search'?.28:.5;
+ c.drawImage(im,Math.max(0,Math.min(iw-cropw,iw*fx-cropw/2)),Math.max(0,Math.min(ih-croph,ih*fy-croph/2)),cropw,croph,x,sy,sw,sh);
+ c.restore();round(x,y,w,h,16);c.strokeStyle='#51657888';c.lineWidth=1;c.stroke();
+}
+function footer(t,scene){line(72,1004,1848,1004,'#344456');tracked('RAID ATLAS',72,1040,14,'#a7b6c8',3);text('ESCAPE FROM TARKOV / PvE',320,1040,15,'#72869f');text('Неофициальный проект',1848,1040,15,'#72869f',400,'right');c.textAlign='left';c.fillStyle=GOLD;c.fillRect(72,1004,1776*clamp(t/60),2);if(scene?.key)text('Карты: RE3MR · Shebuka / tarkov.dev   |   3D: TKL',1848,978,14,'#8c9bb0',400,'right');c.textAlign='left';}
+function revealLines(lines,x,y,size,p){lines.forEach((s,i)=>{c.save();let e=ease((p-i*.12)/.7);c.globalAlpha=e;text(s,x,y+i*size*1.12+(1-e)*35,size,i===lines.length-1?GOLD:WHITE,800);c.restore();});}
+function hero(){bg(29);chrome('route',690,190,1160,730,1);c.fillStyle='#080e17dc';c.fillRect(0,0,660,980);c.drawImage(images.logo,64,65,112,112);tracked('RAID ATLAS',194,130,26,WHITE,6);text('Меньше',72,337,86,WHITE,800);text('поисков.',72,433,86,WHITE,800);text('Больше',72,558,86,GOLD,800);text('плана.',72,654,86,GOLD,800);text('Атлас и планировщик рейдов',76,734,28,'#c0ccda');text('Escape from Tarkov PvE',76,776,28,'#c0ccda');badge('macOS  ·  ОФЛАЙН',76,834);footer(60);}
+function badge(t,x,y){c.font='600 19px Arial';const w=c.measureText(t).width+42;round(x,y,w,48,8);c.fillStyle='#f3c553';c.fill();text(t,x+21,y+31,19,'#111b29',700);}
+window.render=function(t){if(t<0){hero();return;}
+ const scene=scenes.find(s=>t>=s.at&&t<s.end)||scenes.at(-1),p=t-scene.at,d=scene.end-scene.at,u=p/d;
+ bg(t);tracked(scene.tag,76,93,17,GOLD,3.5);
+ if(scene.type==='hook'){
+  c.save();c.globalAlpha=.36;chrome('route',650-80*u,160,1220,770,1.2+.12*u,'map');c.restore();
+  const fade=c.createLinearGradient(0,0,1500,0);fade.addColorStop(0,'#080e17');fade.addColorStop(.6,'#080e17db');fade.addColorStop(1,'#080e1700');c.fillStyle=fade;c.fillRect(0,0,W,H);
+  revealLines(scene.lines,76,375,100,p);text(scene.sub,80,680,31,'#b7c6d7');
+  if(p>2){line(80,755,580,755,GOLD,3);text('ЗАДАНИЯ  /  КЛЮЧИ  /  ЭТАЖИ  /  ВЫХОДЫ',80,800,19,'#8ca2b8',500);}
+ }else if(scene.type==='brand'){
+  const e=ease(p/.9);c.save();c.translate(1390,510);c.scale(.85+.15*e,.85+.15*e);c.globalAlpha=e;c.drawImage(images.logo,-305,-305,610,610);c.restore();
+  revealLines(scene.lines,76,397,136,p);text(scene.sub,82,776,32,'#b7c6d7');
+ }else if(scene.type==='outro'){
+  c.drawImage(images.logo,66,171,190,190);tracked('RAID ATLAS',290,281,49,WHITE,7);
+  revealLines(scene.lines,76,500,105,p);text(scene.sub,82,765,30,'#afc0d5');badge('СКАЧАТЬ ДЛЯ macOS',82,831);text('github.com/Estoutic/raid-atlas',440,864,26,WHITE,600);
+  text('Apple Silicon + Intel  ·  Неофициальный некоммерческий проект',82,949,20,'#879bb2');
+  c.save();c.globalAlpha=.12;chrome('route',1250,235,900,560,1.1);c.restore();
+ }else{
+  const titleSize=scene.key==='route'?96:scene.lines.some(v=>v.length>12)?58:66;
+  revealLines(scene.lines,76,268,titleSize,p);
+  const words=scene.sub.split(' ');let rows=[''];for(const word of words){let i=rows.length-1;if((rows[i]+word).length>31)rows.push(word+' ');else rows[i]+=word+' ';}
+  rows.forEach((row,i)=>text(row.trim(),80,620+i*36,24,'#b7c6d7'));
+  const e=ease(p/.8);let key=scene.key;
+  if(scene.focus==='factory')key='motion-'+Math.min(71,Math.floor(u*72));
+  if(scene.key==='search'&&u>.54)key='floors';
+  chrome(key,640+(1-e)*90,170,1240,775,1+(scene.focus==='panel'?.45:scene.focus==='search'?.2:.025)*ease(u),scene.focus);
+  text(String(scenes.indexOf(scene)-1).padStart(2,'0'),78,850,112,'#25374b',800);line(82,880,450,880,GOLD,3);text('ПЛАНИРУЙ ДО РЕЙДА',82,919,16,'#879bb2',500);
+  if(scene.note){round(660,882,1200,45,8);c.fillStyle='#0a121deb';c.fill();text(scene.note,680,911,19,'#e1d4b1');}
+
+ }
+ footer(t,scene);
+ // Short wipe separates chapters; deterministic so exported frames never depend on timers.
+ if(p<.16&&t>0){c.fillStyle=`rgba(243,197,83,${.22*(1-p/.16)})`;c.fillRect(0,0,W,H);}
+};
+window.ready=(async()=>{const names=['factory','locations','atlas','tasks','gear','route','exits','search','floors','auto-exits','manual',...Array.from({length:8},(_,i)=>'factory-'+i)];await Promise.all(names.map(async n=>{const im=new Image();im.src='../docs/media/screens/'+n+'.png';await im.decode();images[n]=im;}));await Promise.all(Array.from({length:72},async(_,i)=>{const im=new Image();im.src='../cache/promo-factory/'+String(i).padStart(3,'0')+'.jpg';await im.decode();images['motion-'+i]=im;}));const logo=new Image();logo.src='../app/assets/raid-atlas.png';await logo.decode();images.logo=logo;await document.fonts.ready;render(-1);})();
+</script></html>

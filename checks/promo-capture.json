@@ -1,0 +1,221 @@
+{
+  "capturedAt": "2026-11-17T08:45:00.886Z",
+  "source": "Actual app/web UI in an isolated Chromium profile",
+  "scenes": {
+    "factory": {
+      "map": "factory",
+      "floor": 1,
+      "selected": [],
+      "route": false
+    },
+    "locations": {
+      "map": "factory",
+      "floor": 1,
+      "selected": [],
+      "route": false
+    },
+    "atlas": {
+      "map": "factory",
+      "floor": 1,
+      "selected": [],
+      "route": false
+    },
+    "route": {
+      "map": "customs",
+      "floor": 1,
+      "selected": [
+        "5936da9e86f7742d65037edf"
+      ],
+      "route": true
+    },
+    "tasks": {
+      "map": "customs",
+      "floor": 1,
+      "selected": [
+        "5936da9e86f7742d65037edf"
+      ],
+      "route": true
+    },
+    "gear": {
+      "map": "customs",
+      "floor": 1,
+      "selected": [
+        "5936da9e86f7742d65037edf",
+        "6834254f2f0e2a7eb90b62ef"
+      ],
+      "route": false
+    },
+    "exits": {
+      "map": "customs",
+      "floor": 1,
+      "selected": [
+        "5936da9e86f7742d65037edf",
+        "6834254f2f0e2a7eb90b62ef"
+      ],
+      "route": false
+    },
+    "search": {
+      "map": "shoreline",
+      "floor": 3,
+      "selected": [
+        "5936da9e86f7742d65037edf",
+        "6834254f2f0e2a7eb90b62ef"
+      ],
+      "route": false
+    },
+    "floors": {
+      "map": "shoreline",
+      "floor": 3,
+      "selected": [
+        "5936da9e86f7742d65037edf",
+        "6834254f2f0e2a7eb90b62ef"
+      ],
+      "route": false
+    },
+    "auto-exits": {
+      "map": "reserve",
+      "floor": 0,
+      "selected": [
+        "5ede55112c95834b583f052a"
+      ],
+      "route": true
+    },
+    "manual": {
+      "map": "icebreaker",
+      "floor": 0,
+      "selected": [
+        "5ede55112c95834b583f052a"
+      ],
+      "route": false
+    },
+    "factory-0": {
+      "map": "factory",
+      "floor": 1,
+      "selected": [
+        "59675ea386f77414b32bded2",
+        "597a0e5786f77426d66c0636"
+      ],
+      "route": true
+    },
+    "factory-1": {
+      "map": "factory",
+      "floor": 1,
+      "selected": [
+        "59675ea386f77414b32bded2",
+        "597a0e5786f77426d66c0636"
+      ],
+      "route": true
+    },
+    "factory-2": {
+      "map": "factory",
+      "floor": 1,
+      "selected": [
+        "59675ea386f77414b32bded2",
+        "597a0e5786f77426d66c0636"
+      ],
+      "route": true
+    },
+    "factory-3": {
+      "map": "factory",
+      "floor": 1,
+      "selected": [
+        "59675ea386f77414b32bded2",
+        "597a0e5786f77426d66c0636"
+      ],
+      "route": true
+    },
+    "factory-4": {
+      "map": "factory",
+      "floor": 1,
+      "selected": [
+        "59675ea386f77414b32bded2",
+        "597a0e5786f77426d66c0636"
+      ],
+      "route": true
+    },
+    "factory-5": {
+      "map": "factory",
+      "floor": 1,
+      "selected": [
+        "59675ea386f77414b32bded2",
+        "597a0e5786f77426d66c0636"
+      ],
+      "route": true
+    },
+    "factory-6": {
+      "map": "factory",
+      "floor": 1,
+      "selected": [
+        "59675ea386f77414b32bded2",
+        "597a0e5786f77426d66c0636"
+      ],
+      "route": true
+    },
+    "factory-7": {
+      "map": "factory",
+      "floor": 1,
+      "selected": [
+        "59675ea386f77414b32bded2",
+        "597a0e5786f77426d66c0636"
+      ],
+      "route": true
+    }
+  },
+  "route": {
+    "ready": true,
+    "tasks": 338,
+    "open": [
+      1175,
+      279244,
+      4119,
+      670
+    ],
+    "links": 62,
+    "start": 834580,
+    "end": 801466,
+    "route": {
+      "distance": 990.5168106668156,
+      "nodes": 924
+    },
+    "selected": [
+      "5936da9e86f7742d65037edf"
+    ],
+    "goals": [
+      {
+        "id": "5968ec9986f7741ddd6c1012",
+        "floor": 1,
+        "p": [
+          591.5184760072151,
+          296.2085832671617
+        ]
+      }
+    ],
+    "planned": true,
+    "plannedDistance": 993.8305191658003,
+    "visitedFloors": [
+      1
+    ],
+    "savedSelection": [
+      "5936da9e86f7742d65037edf"
+    ],
+    "scenario": "customs",
+    "status": "",
+    "layout": {
+      "main": 1000,
+      "viewport": 1000
+    }
+  },
+  "factory": {
+    "loaded": true,
+    "floor": 1,
+    "meshes": 1,
+    "triangles": 230872,
+    "webgl": true,
+    "bounds": [
+      245.83223724365234,
+      18.786666870117188,
+      239.48497772216797
+    ]
+  },
+  "ok": true
+}

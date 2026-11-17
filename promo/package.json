@@ -1,0 +1,6 @@
+{
+  "name": "raid-atlas-promo",
+  "private": true,
+  "scripts": {"capture": "node capture.cjs", "render": "node render.cjs"},
+  "devDependencies": {"playwright": "1.62.1"}
+}

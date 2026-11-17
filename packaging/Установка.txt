@@ -1,6 +1,6 @@
 RAID ATLAS — установка на Mac
 
-1. Открой файл Raid-Atlas-0.10.1-mac-universal.dmg.
+1. Открой файл Raid-Atlas-<версия>-mac-universal.dmg.
 2. Перетащи Raid Atlas.app в папку Applications («Программы») рядом.
    Если обновляешь приложение, сначала закрой старый Raid Atlas.
 3. Извлеки образ диска и запусти Raid Atlas из «Программ».

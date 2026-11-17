@@ -2,14 +2,16 @@
   <img src="app/assets/raid-atlas.png" width="112" alt="Raid Atlas navigation logo">
   <h1>Raid Atlas</h1>
   <p><b>Less searching. More planning.</b><br>An offline Escape from Tarkov PvE map companion and raid planner for macOS.</p>
-  <p><a href="https://github.com/Estoutic/raid-atlas/releases/latest"><b>Download for Mac</b></a> · <a href="https://github.com/Estoutic/raid-atlas/releases/download/v0.10.2/Raid-Atlas-Promo-1080p.mp4">Watch the 60-second demo</a> · <a href="README.md">Русский</a></p>
+  <p><a href="https://github.com/Estoutic/raid-atlas/releases/latest"><b>Download for Mac</b></a> · <a href="https://github.com/Estoutic/raid-atlas/releases/download/v0.10.2/Raid-Atlas-Promo-v2-1080p.mp4">Watch the 35-second demo</a> · <a href="README.md">Русский</a></p>
 </div>
 
 ![Raid Atlas showing an actual Customs route](docs/media/hero.png)
 
 Pick your quests, check the keys and items you need, then plan a route from your start through your objectives to an available extraction. You do not need the game installed on your Mac. Maps and quest data are bundled for offline use. **The application UI and promo are in Russian; quest search also accepts English names.**
 
-[![Raid Atlas feature preview](docs/media/demo.gif)](https://github.com/Estoutic/raid-atlas/releases/download/v0.10.2/Raid-Atlas-Promo-1080p.mp4)
+[![Raid Atlas feature preview](docs/media/demo.gif)](https://github.com/Estoutic/raid-atlas/releases/download/v0.10.2/Raid-Atlas-Promo-v2-1080p.mp4)
+
+Music: [Venom by Scott Buckley](https://www.scottbuckley.com.au/library/venom/), CC BY 4.0. Edited excerpt.
 
 ## Features
 

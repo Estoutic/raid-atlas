@@ -1,0 +1,66 @@
+{
+  "video": {
+    "file": "releases/Raid-Atlas-Promo-v2-1080p.mp4",
+    "sha256": "0a4617bf65c0a036edf6a2af1e0a53994b8c02fc49489fd599ee2c20e99c27cd",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1",
+          "nb_frames": "1050",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_name": "aac",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_frames": "1642"
+        }
+      ],
+      "format": {
+        "duration": "35.008000",
+        "size": "34629566"
+      }
+    }
+  },
+  "gif": {
+    "file": "docs/media/demo.gif",
+    "sha256": "5bcc6b1d84a9e5595f328573b79d7d5c675293203a22946ac390aff68d6bc216",
+    "bytes": 9001084,
+    "width": 800,
+    "height": 450,
+    "seconds": 12.5,
+    "frames": 125
+  },
+  "scenes": [
+    "woods",
+    "customs",
+    "shoreline",
+    "interchange",
+    "factory"
+  ],
+  "icebreakerIncluded": false,
+  "source": "Actual UI recordings in isolated browser contexts, retimed and cropped in the edit.",
+  "music": {
+    "title": "Venom",
+    "artist": "Scott Buckley",
+    "license": "CC BY 4.0",
+    "url": "https://www.scottbuckley.com.au/library/venom/",
+    "sourceExcerptSeconds": [
+      32.25,
+      67.25
+    ]
+  },
+  "validation": {
+    "fullFfmpegDecode": "passed",
+    "visualReview": "Contact sheet every 2 seconds and focused frames for search, floors, route and transitions",
+    "javascriptSyntax": "passed",
+    "gitDiffCheck": "passed"
+  }
+}

@@ -8,7 +8,7 @@
     <img alt="Карты доступны офлайн" src="https://img.shields.io/badge/maps-offline-23344b?style=flat-square">
     <a href="https://github.com/Estoutic/raid-atlas/actions/workflows/tests.yml"><img alt="Проверки" src="https://github.com/Estoutic/raid-atlas/actions/workflows/tests.yml/badge.svg"></a>
   </p>
-  <p><a href="https://github.com/Estoutic/raid-atlas/releases/latest"><b>↓ Скачать для Mac</b></a> · <a href="https://github.com/Estoutic/raid-atlas/releases/download/v0.10.2/Raid-Atlas-Promo-1080p.mp4">▶ Смотреть ролик · 60 секунд</a> · <a href="README.en.md">English</a></p>
+  <p><a href="https://github.com/Estoutic/raid-atlas/releases/latest"><b>↓ Скачать для Mac</b></a> · <a href="https://github.com/Estoutic/raid-atlas/releases/download/v0.10.2/Raid-Atlas-Promo-v2-1080p.mp4">▶ Смотреть ролик · 35 секунд</a> · <a href="README.en.md">English</a></p>
 </div>
 
 ![Raid Atlas: карта Таможни, цели и рассчитанный маршрут до выхода](docs/media/hero.png)
@@ -19,9 +19,9 @@
 
 ## Посмотри в действии
 
-[![Короткое демо Raid Atlas: карты, комнаты, маршрут и объёмный Завод](docs/media/demo.gif)](https://github.com/Estoutic/raid-atlas/releases/download/v0.10.2/Raid-Atlas-Promo-1080p.mp4)
+[![Короткое демо Raid Atlas: карты, комнаты, маршрут и объёмный Завод](docs/media/demo.gif)](https://github.com/Estoutic/raid-atlas/releases/download/v0.10.2/Raid-Atlas-Promo-v2-1080p.mp4)
 
-**[Полный ролик со звуком · 1080p](https://github.com/Estoutic/raid-atlas/releases/download/v0.10.2/Raid-Atlas-Promo-1080p.mp4)** — реальные кадры приложения. [Медиаматериалы и авторы](promo/README.md).
+**[Полный ролик со звуком · 1080p](https://github.com/Estoutic/raid-atlas/releases/download/v0.10.2/Raid-Atlas-Promo-v2-1080p.mp4)** — Лес, обновлённая Таможня, Берег, Развязка и Завод. Живые действия, поиск комнаты, этажи и 3D. Музыка: [Venom — Scott Buckley](https://www.scottbuckley.com.au/library/venom/), CC BY 4.0. [Медиаматериалы и авторы](promo/README.md).
 
 ## Что помогает в рейде
 

@@ -1,0 +1,65 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Raid Atlas — action cut</title>
+<style>html,body{margin:0;background:#0b111a}canvas{display:block;width:100vw}</style>
+<canvas id="film" width="1920" height="1080"></canvas><script>
+const W=1920,H=1080,c=document.querySelector('canvas').getContext('2d',{willReadFrequently:true});
+const clips={},layers=[document.createElement('canvas'),document.createElement('canvas')];
+layers.forEach(l=>{l.width=W;l.height=H});
+const GOLD='#f3c553',WHITE='#f4f2ea',clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const ease=x=>{x=clamp(x);return x*x*(3-2*x)},mix=(a,b,x)=>a+(b-a)*x;
+const scenes=[
+ {at:0,end:1.5,key:'factory',kind:'hook'},
+ {at:1.5,end:7.5,key:'woods',name:'ЛЕС',transition:'push'},
+ {at:7.5,end:13.5,key:'customs',name:'ТАМОЖНЯ',transition:'zoom'},
+ {at:13.5,end:20,key:'shoreline',name:'БЕРЕГ',transition:'push'},
+ {at:20,end:26,key:'interchange',name:'РАЗВЯЗКА',transition:'up'},
+ {at:26,end:32.5,key:'factory',name:'ЗАВОД',transition:'zoom'},
+ {at:32.5,end:35,kind:'end',transition:'up'}
+];
+function camera(points,t){let a=points[0],b=a;for(const p of points){if(p[0]<=t)a=p;else{b=p;break}b=p;}let q=ease((t-a[0])/Math.max(.0001,b[0]-a[0]));return [mix(a[1],b[1],q),mix(a[2],b[2],q),mix(a[3],b[3],q)];}
+function crop(ctx,video,z=1,x=.5,y=.5){const sw=W/z,sh=H/z,sx=clamp(W*x-sw/2,0,W-sw),sy=clamp(H*y-sh/2,0,H-sh);ctx.drawImage(video,sx,sy,sw,sh,0,0,W,H);}
+function txt(ctx,text,x,y,size=64,color=WHITE,weight=800,align='left'){ctx.font=`${weight} ${size}px -apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif`;ctx.fillStyle=color;ctx.textAlign=align;ctx.fillText(text,x,y);}
+async function seek(key,time){const v=clips[key],t=clamp(time,0,v.duration-.06);if(Math.abs(v.currentTime-t)>.008){await new Promise((resolve,reject)=>{const timeout=setTimeout(()=>reject(Error('seek timeout '+key+' '+t)),15000);v.addEventListener('seeked',()=>{clearTimeout(timeout);resolve()},{once:true});v.currentTime=t;});if(Math.abs(v.currentTime-t)>.06)throw Error('inaccurate seek '+key+': '+v.currentTime+' / '+t);}return v;}
+function sourceTime(s,p){if(s.kind==='hook')return .4+p*1.8;const duration=s.end-s.at;
+ if(s.key==='factory')return .2+p/ duration*11.8;
+ return .12+(clips[s.key].duration-.3)*clamp(p/duration);
+}
+function cam(s,p){if(s.kind==='hook')return [1.7-p*.13,.49,.53];
+ if(s.key==='woods')return camera([[0,1.28,.5,.54],[1.2,1.05,.5,.5],[4.2,1.13,.47,.54],[6,1.27,.46,.53]],p);
+ if(s.key==='customs')return camera([[0,1.55,.82,.32],[.8,1.55,.82,.32],[1.5,1.02,.5,.5],[3,1.1,.53,.55],[5.6,1.32,.55,.58]],p);
+ if(s.key==='shoreline')return camera([[0,1.09,.5,.48],[1.15,1.12,.5,.48],[1.7,2.15,.22,.14],[3.35,2.15,.22,.14],[3.9,1.05,.5,.5],[4.65,1.2,.51,.56],[6.5,1.68,.52,.55]],p);
+ if(s.key==='interchange')return camera([[0,1.12,.5,.52],[1.8,1.16,.53,.52],[2.5,1.38,.74,.36],[3.15,1.12,.58,.5],[4.3,1.35,.5,.5],[5,1.7,.5,.54],[6,1.95,.5,.53]],p);
+ return camera([[0,1.42,.5,.53],[2.3,1.32,.5,.53],[2.8,1.08,.56,.48],[3.4,1.12,.55,.5],[4.2,1.52,.5,.53],[6.5,1.5,.5,.53]],p);
+}
+async function drawScene(ctx,s,p){ctx.fillStyle='#0b111a';ctx.fillRect(0,0,W,H);
+ if(s.kind==='end'){
+  const e=ease(p/.38);ctx.save();ctx.translate(0,(1-e)*65);ctx.globalAlpha=e;
+  ctx.drawImage(logo,839,180,242,242);txt(ctx,'RAID ATLAS',960,554,110,WHITE,850,'center');
+  txt(ctx,'Твой план на рейд.',960,638,42,GOLD,650,'center');
+  txt(ctx,'github.com/Estoutic/raid-atlas',960,822,29,'#a9b8ca',500,'center');ctx.restore();return;
+ }
+ const v=await seek(s.key,sourceTime(s,p)),a=cam(s,p);crop(ctx,v,...a);
+ if(s.kind==='hook'){
+  ctx.fillStyle='#07101c65';ctx.fillRect(0,0,W,H);const e=ease(p/.18),z=1+.07*e;
+  ctx.save();ctx.translate(W/2,H/2);ctx.scale(z,z);ctx.shadowColor='#000';ctx.shadowBlur=35;
+  txt(ctx,'RAID ATLAS',0,20,140,WHITE,900,'center');ctx.restore();
+ }else if(p<1.05){
+  const a=ease(p/.15)*(1-ease((p-.65)/.4));ctx.save();ctx.globalAlpha=a;ctx.shadowColor='#000';ctx.shadowBlur=20;
+  txt(ctx,s.name,72,965,58,WHITE,850);ctx.restore();
+ }
+}
+window.render=async function(t){const i=scenes.findIndex(s=>t>=s.at&&t<s.end),s=scenes[i<0?scenes.length-1:i],p=t-s.at;
+ const next=layers[1].getContext('2d'),prev=layers[0].getContext('2d');await drawScene(next,s,p);
+ c.fillStyle='#0b111a';c.fillRect(0,0,W,H);
+ if(i>0&&p<.3){
+  const before=scenes[i-1],q=ease(p/.3);await drawScene(prev,before,before.end-before.at-.035);
+  c.save();const blur=Math.sin(Math.PI*q)*13;c.filter=`blur(${blur}px)`;
+  if(s.transition==='push'){c.drawImage(layers[0],-W*q,0);c.drawImage(layers[1],W*(1-q),0);}
+  else if(s.transition==='up'){c.drawImage(layers[0],0,-H*q);c.drawImage(layers[1],0,H*(1-q));}
+  else {c.save();c.translate(W/2,H/2);let z=1+.7*q;c.scale(z,z);c.globalAlpha=1-q;c.drawImage(layers[0],-W/2,-H/2);c.restore();c.save();c.translate(W/2,H/2);z=.8+.2*q;c.scale(z,z);c.globalAlpha=q;c.drawImage(layers[1],-W/2,-H/2);c.restore();}
+  c.restore();
+ }else c.drawImage(layers[1],0,0);
+ if(t>34.6){c.fillStyle=`rgba(11,17,26,${ease((t-34.6)/.4)})`;c.fillRect(0,0,W,H);}
+};
+let logo;
+window.ready=(async()=>{await Promise.all(['woods','customs','shoreline','interchange','factory'].map(async key=>{const v=document.createElement('video');v.muted=true;v.preload='auto';v.src='../cache/promo-v2/clips/'+key+'.mp4';await new Promise((resolve,reject)=>{v.onloadeddata=resolve;v.onerror=()=>reject(Error('video load '+key));v.load()});clips[key]=v;}));logo=new Image();logo.src='../app/assets/raid-atlas.png';await logo.decode();await document.fonts.ready;})();
+</script></html>

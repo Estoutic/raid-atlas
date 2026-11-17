@@ -1,0 +1,71 @@
+{
+  "scenes": [
+    {
+      "name": "woods",
+      "seconds": 5.93,
+      "offset": 3.75,
+      "state": {
+        "map": "woods",
+        "floor": 0,
+        "route": false,
+        "style": "classic",
+        "model": false
+      },
+      "errors": []
+    },
+    {
+      "name": "customs",
+      "seconds": 5.857,
+      "offset": 4.223,
+      "state": {
+        "map": "customs",
+        "floor": 1,
+        "route": true,
+        "style": "realistic",
+        "model": false
+      },
+      "errors": []
+    },
+    {
+      "name": "shoreline",
+      "seconds": 7.024,
+      "offset": 2.7359999999999998,
+      "state": {
+        "map": "shoreline",
+        "floor": 3,
+        "route": false,
+        "style": "classic",
+        "model": false
+      },
+      "errors": []
+    },
+    {
+      "name": "interchange",
+      "seconds": 6.413,
+      "offset": 2.667,
+      "state": {
+        "map": "interchange",
+        "floor": 1,
+        "route": false,
+        "style": "classic",
+        "model": false
+      },
+      "errors": []
+    },
+    {
+      "name": "factory",
+      "seconds": 12.414,
+      "offset": 8.546,
+      "state": {
+        "map": "factory",
+        "floor": 3,
+        "route": true,
+        "style": "classic",
+        "model": true
+      },
+      "errors": []
+    }
+  ],
+  "source": "Real UI recordings; isolated contexts; visible cursor follows actual pointer events",
+  "ok": true
+}

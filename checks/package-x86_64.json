@@ -1,0 +1,94 @@
+{
+  "ok" : true,
+  "result" : {
+    "maps" : [
+      {
+        "exits" : 9,
+        "hasPlan" : true,
+        "image" : true,
+        "map" : "factory",
+        "tasks" : 44
+      },
+      {
+        "exits" : 28,
+        "hasPlan" : true,
+        "image" : true,
+        "map" : "customs",
+        "tasks" : 80
+      },
+      {
+        "exits" : 19,
+        "hasPlan" : true,
+        "image" : true,
+        "map" : "shoreline",
+        "tasks" : 79
+      },
+      {
+        "exits" : 18,
+        "hasPlan" : true,
+        "image" : true,
+        "map" : "woods",
+        "tasks" : 78
+      },
+      {
+        "exits" : 11,
+        "hasPlan" : true,
+        "image" : true,
+        "map" : "reserve",
+        "tasks" : 63
+      },
+      {
+        "exits" : 12,
+        "hasPlan" : true,
+        "image" : true,
+        "map" : "lighthouse",
+        "tasks" : 66
+      },
+      {
+        "exits" : 9,
+        "hasPlan" : true,
+        "image" : true,
+        "map" : "interchange",
+        "tasks" : 41
+      },
+      {
+        "exits" : 6,
+        "hasPlan" : true,
+        "image" : true,
+        "map" : "ground-zero",
+        "tasks" : 30
+      },
+      {
+        "exits" : 19,
+        "hasPlan" : true,
+        "image" : true,
+        "map" : "streets-of-tarkov",
+        "tasks" : 76
+      },
+      {
+        "exits" : 2,
+        "hasPlan" : false,
+        "image" : true,
+        "map" : "the-labyrinth",
+        "tasks" : 9
+      },
+      {
+        "exits" : 1,
+        "hasPlan" : false,
+        "image" : true,
+        "map" : "icebreaker",
+        "tasks" : 19
+      },
+      {
+        "exits" : 0,
+        "hasPlan" : true,
+        "image" : true,
+        "map" : "terminal",
+        "tasks" : 0
+      }
+    ],
+    "ok" : true,
+    "tasks" : 338,
+    "total" : 12
+  }
+}

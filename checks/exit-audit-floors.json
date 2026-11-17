@@ -1,0 +1,50 @@
+{
+  "ok" : true,
+  "result" : {
+    "ok" : true,
+    "rows" : [
+      {
+        "located" : 28,
+        "map" : "customs",
+        "otherFloors" : 7,
+        "outsideMap" : 0
+      },
+      {
+        "located" : 19,
+        "map" : "shoreline",
+        "otherFloors" : 1,
+        "outsideMap" : 0
+      },
+      {
+        "located" : 11,
+        "map" : "reserve",
+        "otherFloors" : 3,
+        "outsideMap" : 0
+      },
+      {
+        "located" : 9,
+        "map" : "interchange",
+        "otherFloors" : 0,
+        "outsideMap" : 0
+      },
+      {
+        "located" : 6,
+        "map" : "ground-zero",
+        "otherFloors" : 0,
+        "outsideMap" : 0
+      },
+      {
+        "located" : 19,
+        "map" : "streets-of-tarkov",
+        "otherFloors" : 0,
+        "outsideMap" : 0
+      },
+      {
+        "located" : 9,
+        "map" : "factory",
+        "otherFloors" : 4,
+        "outsideMap" : 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+Package verified 2026-11-17
+DMG: releases/Raid-Atlas-0.10.1-mac-universal.dmg
+Bytes: 81871410
+SHA-256: e89b1820a36f8018cca26ca5241b9f8bfa607b1db2cbb2fb15a137a0cfc11698
+Read-only UDZO image verified by hdiutil.
+Root permissions 0755; Applications points to /Applications.
+All 53 bundle files are identical to the runtime-tested package.
+Ad-hoc codesign verified; no Developer ID / notarization.
+Mach-O: arm64 + x86_64; both deployment targets macOS 12.0.
+Dependencies: system frameworks and system Swift libraries only.
+Host: Apple Silicon, macOS 15.6.1.
+arm64: full exit UI audit passed, 12 maps / 14 views.
+x86_64 through Rosetta: atlas smoke passed, 12 maps.
+Physical Intel and macOS 12 not tested.
+User settings untouched by isolated test profiles.

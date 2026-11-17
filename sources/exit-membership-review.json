@@ -1,0 +1,187 @@
+{
+  "reviewedOn": "2026-11-17",
+  "scope": "Membership on map, not current in-raid availability. See exit-audit.md for source disagreements.",
+  "maps": {
+    "factory": {
+      "ids": [
+        "4b93f765fc6e0b6379679b3c827074d4e57ff680",
+        "f261d229a5b13a3292a4a49dced2a4949dfc342b",
+        "f16ce849a9d153a8813b6bf6a049d530f1cc44c2",
+        "51efd2aabf8b603f7a5d54327aa3d8a94e22af6b",
+        "b1e817c36812ebf2a8b1ac141ca88449a0b0469c",
+        "f3494ee4a96ff19ab2946746e7e15ba0d12871dc",
+        "99c2f21880da0baf75d431a5f45b462fde2f79b1",
+        "29b887a73725274d657c8a5366614b9b900387e2",
+        "1733510cd360e7a13af356612afad7214aae64e4"
+      ]
+    },
+    "customs": {
+      "ids": [
+        "ab12c1f902a669fb0c940820e8cc40d7131e3208",
+        "aa56e9228b8452533873eeffa11b587007f49429",
+        "1dd5cede4fa747d279b076872c45fc59a4c3b916",
+        "3f7e27d7bae8ffb6e3004af071b18bf0e7d896b8",
+        "59c2c12e375a1b45a8e5ac1a32c5581b593aa4df",
+        "f4cdf3dbe54ef647a2a798266a39f1761f871b96",
+        "fed921b46204418ef8fa0174468c6886e91325c4",
+        "c936f6e98a38c78963a308892b708474c54f4718",
+        "c1e0123c42bbd048096fffbe5c98fa28e866680b",
+        "cdae9cc1c431a141431e9022a901eaaa70ef67ea",
+        "457b313c6ca6a631ca127134e6ecfde3b6cbc1a1",
+        "d2cefbb74bd24ffc53a1a3a148069483c5fae6cb",
+        "f367bab752ed8474989104613d1151e9434f2bd4",
+        "92e7412193276c1044299b51d930440cdab835e4",
+        "1e7baccc265b49195aead2e783779cbca83d73f3",
+        "ad8fc418508df45199927afc5ea8c981337ecd64",
+        "6eee3e566de0b079cd76f204d297ba954b301e8c",
+        "c9e36de4f1b9f73f4698b5ba46135a1e0aafb434",
+        "fc4876c616edf234b1b0b75fb02fce784e54a6c2",
+        "f865b04a5d4c6b10d92f8783b51b0b486f55cf79",
+        "74840d2d5d9c332e466148e94be1ab4ef0fb3ac4",
+        "bf421e259c2e851b159401432318bcca326b16d5",
+        "0eedf7dfd9db21b60e216ebccbf52271a06cddf6",
+        "46979e6dd937e83470b013382282919388a07f8c",
+        "973dfce3d353b26fe9b3e9373bd4536d26fffc05",
+        "500734adcba6b80cc42b3ca3f4884f89aceffca0",
+        "f57705238de721e427d8ea262f7226f804e88726",
+        "f3f0171d1c8396a152e319f372c4e9d9df120e73"
+      ]
+    },
+    "shoreline": {
+      "ids": [
+        "f7da3681df4ae3bd7b3d5ba0e0f960dc1722d23f",
+        "cf857a4cc48ed3c8c6dd27f7d55d6348ffbdbc68",
+        "fd880bdc668a7a177b5f2eedde4b40a9661e68b1",
+        "ef41c42e56e8f67e5835245dd4f66c4ed8684db9",
+        "818e7812793c8e47a09c62f670ae189c8bd61901",
+        "a302bfd6b8b040202ce873db7386f930318c3f0b",
+        "04d0f85f6abb2d77d803449be6918c26efc58478",
+        "aef6de6ce5e7c898a2a6a65c4433e683f4e06baa",
+        "e9f00531aa0d2933a41d4a6c8446a952736b304d",
+        "1dc6fca97ac062b2363fe53479748fb0bc6e2d6b",
+        "eeddbe9a8476361059a69eab4c0deeadac93ab5c",
+        "40f2f8a82926d016855443fba325070fa8b5dafb",
+        "3475b9df1bf661d3c746ff1a1a8493bae828b939",
+        "566161efb75d27f6347b9d0f610cd423dcdf319f",
+        "9daba46bc5e06708a54c6274678e34e6bf13de12",
+        "aa2c447aa7f49a1795efd56aad7ef0670888425f",
+        "95406652decb52abdd763626e88024931990da7d",
+        "a048afd75fd279f62ee3da4fb0f38c42d8b7a934",
+        "1c7d8b060c38232059ce879b560a5979d12d7239"
+      ]
+    },
+    "woods": {
+      "ids": [
+        "66f71d2b38d7af05a0fa888343dda2d5df97b314",
+        "d71465c84357271657810c0395fd1e69b7636e4a",
+        "5e2529edb827c041cb4198afb28b8c1ded6eace9",
+        "bd8c86edf705cfb2bd02f8ccc95e64ed3450760c",
+        "69c8400dbe1a154ddc5a4617d3ae2053239f4f33",
+        "c89cb6207811316f70945ed1de3e5e0d9f8cfc96",
+        "5c838439af24f720bd7b8b6abcb2ded710bcaba0",
+        "edceeaccf9cb0f6c3fd47c0e5625f4cdd2f49e9e",
+        "010b98a982808abfba6d5419a3705cbe05409de1",
+        "ab12f6c1f417aae2de34a55560d4be3ff5f7c309",
+        "beefde059ae2d331c8d568066518e0293ff9da59",
+        "3e64a0665e093dac84499dc50e2768684e8bd508",
+        "6363090af9e0ab1a3d0f7154ea89e1c1c362e30d",
+        "7692ab53faec4d1c375212a2bca01796de7c4cdb",
+        "dc49f6444b7e835b4cfb2589e1df68a21a9bf3c9",
+        "b38ddc0bb3e976a7c1aae719eec1fdab83369da7",
+        "495bcac9e8a677cef40194ea3c57d65f2c4276d9",
+        "b6371d7a90e044c79df5dbc651983ddabbc9b2bf"
+      ]
+    },
+    "reserve": {
+      "ids": [
+        "1cef4b3cdf682c528a33c165f1e57fff82f7898e",
+        "c22a209b9f46247ff2d5376595377db3908d53fa",
+        "b166214093a289801ff6e25389caabe8c83792a5",
+        "bd1ef03f5270eb97daeb05b6e4f206895c17860d",
+        "78919c46c8d06b4ea7790a701b383e1cc0dda28e",
+        "819ea4a9c6d61f208739c3cf866c6a17c79b4707",
+        "c5ec07b1e95683ea53288f219183662c035bc507",
+        "493cc117068458f12944b1b83710116395831e21",
+        "4603ee6acd4e4873aadc865fc476e0c0e3b4c724",
+        "037fb35378864fe476e2b1bb8b6a613ee8ac7101",
+        "3a5be2ffaa91dc56af778ea406023197d32b33c7"
+      ]
+    },
+    "lighthouse": {
+      "ids": [
+        "73ce3c0b6f2e55c2d5d38132e4046244cb7ddcfa",
+        "a2f8464f5b47a91fbc0ecf12e1183a8c4884d9b0",
+        "147a3f816c587f8c2b842160c6778185ac49c17d",
+        "7abf70359636bf5dc3515359a3553cb0731d4f4e",
+        "65541e3df26023e91dd4f156e6409ef06eb0027a",
+        "cc16b27f07697867c3afe8731a5323f8b6db7574",
+        "2c1d67e0a46f41e0c268dce15848eb3722fae9ad",
+        "aa9a937fb2c3c2d51fe21ab457ab0613ff5e2539",
+        "29fc02598426cdcb78bf9e07e188680ce0e8730d",
+        "3ab7031964d90e541d16b1307d2017f424518b49",
+        "e2d5caeaeb8747a3182be5bfc98cad24892a2d00",
+        "4d2faa68a953a89cc697348f947ef24d9a626380"
+      ]
+    },
+    "interchange": {
+      "ids": [
+        "7bdf4ff52b59f4bb8d60cc0ec90a932596b0f6ac",
+        "714a00d27d6ac36ca35a714c54b5517b32373914",
+        "56bd754c4ce1864b212e908114bd6190940e01c2",
+        "1e65f8bedbd9322074ae387892f0972883bdb794",
+        "12448fe61862391cd784b298a6c3081f24de39d6",
+        "9aa4d38482dc1996ba1f191e2f897e193e05f982",
+        "44bd9f5882e7a6044c3d6e15abb6560306575d96",
+        "4cf9e8c499daa3f18291b2fce601e6dd0be66882",
+        "f60ee7a996094e3a9c0cb1155a6e20558a4386db"
+      ]
+    },
+    "ground-zero": {
+      "ids": [
+        "c0be13ca1d5b12f54c2f615533bcb137d26a98ff",
+        "22f281b913a76b31fe574b792b65c115fd8bb656",
+        "e858220a780a95ffbb923225d7649aa134df8836",
+        "58b21021d80db728cd7db688a00677980593bf85",
+        "d36aaa1e0306978ca39f00edec5b4195bf7a57da",
+        "af20846a32f03fec90986c60eb732da7b87f72b0"
+      ]
+    },
+    "streets-of-tarkov": {
+      "ids": [
+        "51cfcc623bcf29fa75c44fe4997e4b130ffbba34",
+        "62268c2eccf21f2a38b8ad9c7a18fcdd470b6ff3",
+        "faaa78ad8ea79ae073fc497da44fedc3cc0364be",
+        "321358e7c712157a0692f8212c0ce644a85d8d9a",
+        "d93214582e40ec0c37a7f55ba8777447f43e9b2f",
+        "dfe286a04cab0aa9063256c15fb11f9d1af61383",
+        "dd263ba81dc18be1d7e25f213b19481699c0a898",
+        "503af4b68570318227939024660b81dceb9f4794",
+        "6ba57e258ce3f2d026ef5aa22e2c8b046e427f2d",
+        "f44cf9cd1192e55035944c19fb2745c9c8c58692",
+        "e565f6d911f327638f03bdd00990cdd8585a4f80",
+        "85a39576dc7f2aab49bf944f4f272464758d0e56",
+        "177bd2a8abcb68ca8d1964d6c5efdfeeb3f6abb8",
+        "b89e9f9cc4529c5ba4b2487c6a5331c694d0d22a",
+        "9ab4ef82011a4ebdb53413d61c806c12d731ebd4",
+        "91ef53b9da2e2c8d3dab3a51536d24d149af44c5",
+        "d40366cc1831e903e3c9ddb3a28063a7baa45a6a",
+        "1adaba531eb66eae1ef23896862a3681ed23a67f",
+        "238a87ecf9488888592df0fc488eb2ccd607d68f"
+      ]
+    },
+    "the-labyrinth": {
+      "ids": [
+        "8eabbd6a5b3d8d277b4acdbfc2ba735ff5a26ae8",
+        "8fd7a20a588f2243a186af931a5c0224ae01e972"
+      ]
+    },
+    "icebreaker": {
+      "ids": [
+        "9bf65c4c24d0153f1542a90ddabadb37198ab9ff"
+      ]
+    },
+    "terminal": {
+      "ids": []
+    }
+  }
+}

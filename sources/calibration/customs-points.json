@@ -1,0 +1,23 @@
+[
+ {"name":"Crossroads ground","svg":[1027.063,217.031],"classic":[1988,377],"realistic":[1927,569]},
+ {"name":"RUAF road end","svg":[703.274,165.815],"classic":[1398,298],"realistic":[1320,494]},
+ {"name":"ZB1011 stairs","svg":[75.963,177.591],"classic":[185,358],"realistic":[137,489]},
+ {"name":"Trailer park exit","svg":[1006.926,72.672],"classic":[1878,181],"realistic":[1886,354]},
+ {"name":"Dorms car gate","svg":[513.288,511.809],"classic":[1103,897],"realistic":[976,947]},
+ {"name":"Old gas basement","svg":[384.887,130.724],"classic":[789,309],"realistic":[726,426]},
+ {"name":"Smugglers boat shore","svg":[734.315,422.699],"classic":[1497,706],"realistic":[1369,844]},
+ {"name":"ZB1012 stairs","svg":[233.875,191.590],"classic":[521,395],"realistic":[440,511]},
+ {"name":"Signal approach on railway","svg":[498.628,57.797],"classic":[967,230],"realistic":[911,369]},
+ {"name":"Flare exit on railway","svg":[525.184,25.258],"classic":[995,200],"realistic":[958,326]},
+ {"name":"New gas building","svg":[291.934,332.516],"classic":[624,628],"realistic":[549,700]},
+ {"name":"Main bridge centre","svg":[761.611,310.873],"classic":[1516,516],"realistic":[1468,674]},
+ {"name":"Dorms courtyard","svg":[494.501,449.586],"classic":[1055,798],"realistic":[935,863]},
+ {"name":"Fortress courtyard","svg":[493.508,177.080],"classic":[1020,377],"realistic":[934,499]},
+ {"name":"Old construction","svg":[618.623,293.165],"classic":[1266,551],"realistic":[1147,669]},
+ {"name":"Warehouse3","svg":[305.836,209.544],"classic":[663,434],"realistic":[571,540]},
+ {"name":"Military checkpoint","svg":[125.115,302.019],"classic":[290,601],"realistic":[233,674]},
+ {"name":"Powerline tower","svg":[199.588,410.234],"classic":[470,750],"realistic":[379,790]},
+ {"name":"Big red ground centre","svg":[906.586,184.950],"classic":[1783,356],"realistic":[1706,505]},
+ {"name":"Western rail junction","svg":[395,180],"classic":[828,403],"realistic":[744,507]},
+ {"name":"Factory shacks road","svg":[494.501,289.230],"classic":[1030,559],"realistic":[951,687]}
+]

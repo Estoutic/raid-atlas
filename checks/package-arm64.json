@@ -1,0 +1,120 @@
+{
+  "ok" : true,
+  "result" : {
+    "ok" : true,
+    "rows" : [
+      {
+        "allLocated" : true,
+        "exits" : 9,
+        "filters" : true,
+        "map" : "factory",
+        "selection" : true,
+        "style" : "plan"
+      },
+      {
+        "allLocated" : true,
+        "exits" : 9,
+        "filters" : true,
+        "map" : "factory",
+        "selection" : true,
+        "style" : "model"
+      },
+      {
+        "allLocated" : true,
+        "exits" : 28,
+        "filters" : true,
+        "map" : "customs",
+        "selection" : true,
+        "style" : "classic"
+      },
+      {
+        "allLocated" : true,
+        "exits" : 28,
+        "filters" : true,
+        "map" : "customs",
+        "selection" : true,
+        "style" : "realistic"
+      },
+      {
+        "allLocated" : true,
+        "exits" : 19,
+        "filters" : true,
+        "map" : "shoreline",
+        "selection" : true,
+        "style" : "default"
+      },
+      {
+        "allLocated" : true,
+        "exits" : 18,
+        "filters" : true,
+        "map" : "woods",
+        "selection" : true,
+        "style" : "default"
+      },
+      {
+        "allLocated" : true,
+        "exits" : 11,
+        "filters" : true,
+        "map" : "reserve",
+        "selection" : true,
+        "style" : "default"
+      },
+      {
+        "allLocated" : true,
+        "exits" : 12,
+        "filters" : true,
+        "map" : "lighthouse",
+        "selection" : true,
+        "style" : "default"
+      },
+      {
+        "allLocated" : true,
+        "exits" : 9,
+        "filters" : true,
+        "map" : "interchange",
+        "selection" : true,
+        "style" : "default"
+      },
+      {
+        "allLocated" : true,
+        "exits" : 6,
+        "filters" : true,
+        "map" : "ground-zero",
+        "selection" : true,
+        "style" : "default"
+      },
+      {
+        "allLocated" : true,
+        "exits" : 19,
+        "filters" : true,
+        "map" : "streets-of-tarkov",
+        "selection" : true,
+        "style" : "default"
+      },
+      {
+        "allLocated" : true,
+        "exits" : 2,
+        "filters" : true,
+        "map" : "the-labyrinth",
+        "selection" : true,
+        "style" : "default"
+      },
+      {
+        "allLocated" : true,
+        "exits" : 1,
+        "filters" : true,
+        "map" : "icebreaker",
+        "selection" : true,
+        "style" : "default"
+      },
+      {
+        "allLocated" : true,
+        "exits" : 0,
+        "filters" : true,
+        "map" : "terminal",
+        "selection" : true,
+        "style" : "default"
+      }
+    ]
+  }
+}

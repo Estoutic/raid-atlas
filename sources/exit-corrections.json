@@ -1,0 +1,601 @@
+{
+  "reviewedOn": "2026-11-17",
+  "sources": [
+    "https://json.tarkov.dev/pve/maps",
+    "https://tarkov.help/en/map/ground-zero/extractions",
+    "https://tarkov.help/en/map/factory/extractions",
+    "https://tarkov.help/en/map/customs/extractions",
+    "https://tarkov.help/en/map/shoreline/extractions",
+    "https://tarkov.help/en/map/woods/extractions",
+    "https://tarkov.help/en/map/reserve/extractions",
+    "https://tarkov.help/en/map/interchange/extractions",
+    "https://tarkov.help/en/map/streets/extractions",
+    "https://tarkov.help/en/map/icebreaker/extractions",
+    "https://tarkov.help/en/map/lighthouse/home"
+  ],
+  "excluded": {
+    "ground-zero": {
+      "495c627fb5f7498fb7621bf193f16b74e1c952b9": {
+        "name": "UN Roadblock",
+        "belongsTo": "woods",
+        "reason": "Matches Woods UN Roadblock name and vicinity; outside Ground Zero bounds; absent from Sandbox_high and Ground Zero extraction guide."
+      },
+      "b8427fbbffcf849ead5619fcc6c4d19225468f28": {
+        "name": "Exit_E10_coop",
+        "belongsTo": "streets-of-tarkov",
+        "reason": "Pinewood basement: same name and near-identical coordinates as Streets; absent from Sandbox_high and Ground Zero extraction guide."
+      },
+      "47e9492ade77358f16b17e94f44e09fa50b82276": {
+        "name": "East Gate",
+        "belongsTo": "woods",
+        "reason": "Exact xyz match with Woods Scav Bunker; absent from Sandbox_high and Ground Zero extraction guide."
+      }
+    }
+  },
+  "overviewAnchors": {
+    "interchange": {
+      "1e65f8bedbd9322074ae387892f0972883bdb794": {
+        "file": "interchange-web-render.jpg",
+        "point": [
+          25,
+          746
+        ],
+        "reason": "Published RE3MR Path to River symbol H; existing calibrated pair [-17.39,560.03] -> [25,746] in sources/calibration/extra-points.json. True extract center is outside SVG viewBox; display anchor only, routing coordinates unchanged."
+      }
+    },
+    "woods": {
+      "69c8400dbe1a154ddc5a4617d3ae2053239f4f33": {
+        "file": "woods-web-render.jpg",
+        "point": [
+          1149.87,
+          1027.2
+        ],
+        "reason": "RUAF Gate dot already registered in extra-points.json; valid center is just outside SVG. Display only."
+      },
+      "beefde059ae2d331c8d568066518e0293ff9da59": {
+        "file": "woods-web-render.jpg",
+        "point": [
+          1671.47,
+          834.13
+        ],
+        "reason": "RE3MR Woods v1.7: Old Railway Depot blue dot"
+      },
+      "3e64a0665e093dac84499dc50e2768684e8bd508": {
+        "file": "woods-web-render.jpg",
+        "point": [
+          402.13,
+          909.87
+        ],
+        "reason": "RE3MR Woods v1.7: Scav House blue dot"
+      },
+      "6363090af9e0ab1a3d0f7154ea89e1c1c362e30d": {
+        "file": "woods-web-render.jpg",
+        "point": [
+          1677.87,
+          730.67
+        ],
+        "reason": "RE3MR Woods v1.7: Eastern Rocks blue dot"
+      },
+      "7692ab53faec4d1c375212a2bca01796de7c4cdb": {
+        "file": "woods-web-render.jpg",
+        "point": [
+          1243.73,
+          572.8
+        ],
+        "reason": "RE3MR Woods v1.7: Mountain Stash blue dot"
+      },
+      "dc49f6444b7e835b4cfb2589e1df68a21a9bf3c9": {
+        "file": "woods-web-render.jpg",
+        "point": [
+          645.33,
+          220.8
+        ],
+        "reason": "RE3MR Woods v1.7: Scav Bunker blue dot"
+      },
+      "495bcac9e8a677cef40194ea3c57d65f2c4276d9": {
+        "file": "woods-web-render.jpg",
+        "point": [
+          707.2,
+          922.67
+        ],
+        "reason": "RE3MR Woods v1.7: Dead Man’s Place blue dot"
+      },
+      "b6371d7a90e044c79df5dbc651983ddabbc9b2bf": {
+        "file": "woods-web-render.jpg",
+        "point": [
+          729.6,
+          900.27
+        ],
+        "reason": "RE3MR Woods v1.7: Boat blue dot"
+      }
+    },
+    "shoreline": {
+      "40f2f8a82926d016855443fba325070fa8b5dafb": {
+        "file": "shoreline-web-render.jpg",
+        "point": [
+          1510,
+          172
+        ],
+        "reason": "RE3MR Shoreline v2.4E: Smuggler’s Path marker"
+      },
+      "3475b9df1bf661d3c746ff1a1a8493bae828b939": {
+        "file": "shoreline-web-render.jpg",
+        "point": [
+          1050,
+          226
+        ],
+        "reason": "RE3MR Shoreline v2.4E: Admin Basement marker at the administration building"
+      },
+      "a048afd75fd279f62ee3da4fb0f38c42d8b7a934": {
+        "file": "shoreline-web-render.jpg",
+        "point": [
+          1096,
+          248
+        ],
+        "reason": "RE3MR Shoreline v2.4E: East Wing Gym Entrance marker"
+      },
+      "aa2c447aa7f49a1795efd56aad7ef0670888425f": {
+        "file": "shoreline-web-render.jpg",
+        "point": [
+          347,
+          607
+        ],
+        "reason": "RE3MR Shoreline v2.4E: Ruined Road marker"
+      }
+    },
+    "reserve": {
+      "78919c46c8d06b4ea7790a701b383e1cc0dda28e": {
+        "file": "reserve-web-render.jpg",
+        "point": [
+          894,
+          579
+        ],
+        "reason": "RE3MR Reserve v1.3F: Sewer Manhole actual location above the M callout"
+      },
+      "493cc117068458f12944b1b83710116395831e21": {
+        "file": "reserve-web-render.jpg",
+        "point": [
+          1010,
+          32
+        ],
+        "reason": "RE3MR Reserve v1.3F: Heating Pipe at the northern wall"
+      },
+      "4603ee6acd4e4873aadc865fc476e0c0e3b4c724": {
+        "file": "reserve-web-render.jpg",
+        "point": [
+          1954,
+          354
+        ],
+        "reason": "RE3MR Reserve v1.3F: Hole in the Wall endpoint of H leader, not the floating label"
+      },
+      "037fb35378864fe476e2b1bb8b6a613ee8ac7101": {
+        "file": "reserve-web-render.jpg",
+        "point": [
+          959,
+          758
+        ],
+        "reason": "RE3MR Reserve v1.3F: Checkpoint Fence endpoint of F leader"
+      },
+      "3a5be2ffaa91dc56af778ea406023197d32b33c7": {
+        "file": "reserve-web-render.jpg",
+        "point": [
+          600,
+          292
+        ],
+        "reason": "RE3MR Reserve v1.3F: Depot Hermetic Door entrance at the warehouse; U leader endpoint above ground"
+      }
+    },
+    "lighthouse": {
+      "aa9a937fb2c3c2d51fe21ab457ab0613ff5e2539": {
+        "file": "lighthouse-web-render.jpg",
+        "point": [
+          1625.38,
+          698.51
+        ],
+        "reason": "RE3MR Lighthouse v1.4: South Road Landslide blue cross"
+      },
+      "3ab7031964d90e541d16b1307d2017f424518b49": {
+        "file": "lighthouse-web-render.jpg",
+        "point": [
+          1244.09,
+          903.1
+        ],
+        "reason": "RE3MR Lighthouse v1.4: Hideout under Landing Stage blue cross"
+      },
+      "e2d5caeaeb8747a3182be5bfc98cad24892a2d00": {
+        "file": "lighthouse-web-render.jpg",
+        "point": [
+          507.35,
+          583.81
+        ],
+        "reason": "RE3MR Lighthouse v1.4: Scav Hideout at Grotto blue cross"
+      },
+      "4d2faa68a953a89cc697348f947ef24d9a626380": {
+        "file": "lighthouse-web-render.jpg",
+        "point": [
+          466.02,
+          203.56
+        ],
+        "reason": "RE3MR Lighthouse v1.4: Industrial Zone Gates blue cross"
+      }
+    },
+    "streets-of-tarkov": {
+      "e565f6d911f327638f03bdd00990cdd8585a4f80": {
+        "file": "streets-of-tarkov-web-render.jpg",
+        "point": [
+          1294.63,
+          1185.96
+        ],
+        "reason": "RE3MR Streets v1.6e: Primorsky Ave Taxi marker"
+      },
+      "177bd2a8abcb68ca8d1964d6c5efdfeeb3f6abb8": {
+        "file": "streets-of-tarkov-web-render.jpg",
+        "point": [
+          1342.69,
+          241.37
+        ],
+        "reason": "RE3MR Streets v1.6e: Cardinal parking ramp marker"
+      },
+      "b89e9f9cc4529c5ba4b2487c6a5331c694d0d22a": {
+        "file": "streets-of-tarkov-web-render.jpg",
+        "point": [
+          1855.74,
+          890.25
+        ],
+        "reason": "RE3MR Streets v1.6e: Catacombs entrance marker"
+      },
+      "9ab4ef82011a4ebdb53413d61c806c12d731ebd4": {
+        "file": "streets-of-tarkov-web-render.jpg",
+        "point": [
+          1777.37,
+          543.35
+        ],
+        "reason": "RE3MR Streets v1.6e: Klimov shopping mall stairs marker"
+      },
+      "91ef53b9da2e2c8d3dab3a51536d24d149af44c5": {
+        "file": "streets-of-tarkov-web-render.jpg",
+        "point": [
+          972.8,
+          495.28
+        ],
+        "reason": "RE3MR Streets v1.6e: Kamchatskaya Arch marker"
+      },
+      "d40366cc1831e903e3c9ddb3a28063a7baa45a6a": {
+        "file": "streets-of-tarkov-web-render.jpg",
+        "point": [
+          1551.67,
+          1160.88
+        ],
+        "reason": "RE3MR Streets v1.6e: Ventilation Shaft marker"
+      },
+      "1adaba531eb66eae1ef23896862a3681ed23a67f": {
+        "file": "streets-of-tarkov-web-render.jpg",
+        "point": [
+          864.13,
+          933.09
+        ],
+        "reason": "RE3MR Streets v1.6e: Sewer Manhole marker"
+      },
+      "238a87ecf9488888592df0fc488eb2ccd607d68f": {
+        "file": "streets-of-tarkov-web-render.jpg",
+        "point": [
+          1855.74,
+          890.25
+        ],
+        "reason": "RE3MR Streets v1.6e: Basement entrance shares Catacombs xyz in raw source"
+      }
+    },
+    "factory": {
+      "29b887a73725274d657c8a5366614b9b900387e2": {
+        "file": "factory-web-render.png",
+        "point": [
+          1585,
+          467
+        ],
+        "reason": "RE3MR Factory v1.7c: Camera Bunker Door A on tunnels panel"
+      },
+      "1733510cd360e7a13af356612afad7214aae64e4": {
+        "file": "factory-web-render.png",
+        "point": [
+          102,
+          347
+        ],
+        "reason": "RE3MR Factory v1.7c: Office Window W on top-floor panel"
+      }
+    },
+    "the-labyrinth": {
+      "8eabbd6a5b3d8d277b4acdbfc2ba735ff5a26ae8": {
+        "file": "the-labyrinth-web-render.jpg",
+        "point": [
+          1515.08,
+          769.23
+        ],
+        "reason": "RE3MR Labyrinth v0.7: W / The Way Up marker, not a world-to-image projection"
+      },
+      "8fd7a20a588f2243a186af931a5c0224ae01e972": {
+        "file": "the-labyrinth-web-render.jpg",
+        "point": [
+          966.15,
+          1142.15
+        ],
+        "reason": "RE3MR Labyrinth v0.7: A / Ariadne’s Path marker"
+      }
+    },
+    "icebreaker": {
+      "9bf65c4c24d0153f1542a90ddabadb37198ab9ff": {
+        "file": "icebreaker-web-render.jpg",
+        "point": [
+          1243,
+          130
+        ],
+        "reason": "RE3MR Icebreaker v1.7: H at helipad deck 2; atlas has separate deck panels"
+      }
+    },
+    "customs": {
+      "457b313c6ca6a631ca127134e6ecfde3b6cbc1a1": {
+        "file": "customs-classic-render.png",
+        "point": [
+          1211,
+          399
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only.",
+        "alternates": [
+          {
+            "file": "customs-web-render.png",
+            "point": [
+              1118,
+              588
+            ],
+            "reason": "RE3MR Customs v1.1E: reviewed named exit symbol / leader; per-image display only."
+          }
+        ]
+      },
+      "d2cefbb74bd24ffc53a1a3a148069483c5fae6cb": {
+        "file": "customs-classic-render.png",
+        "point": [
+          831,
+          252
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only.",
+        "alternates": [
+          {
+            "file": "customs-web-render.png",
+            "point": [
+              714,
+              382
+            ],
+            "reason": "RE3MR Customs v1.1E: reviewed named exit symbol / leader; per-image display only."
+          }
+        ]
+      },
+      "f367bab752ed8474989104613d1151e9434f2bd4": {
+        "file": "customs-classic-render.png",
+        "point": [
+          422,
+          970
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only.",
+        "alternates": [
+          {
+            "file": "customs-web-render.png",
+            "point": [
+              392,
+              954
+            ],
+            "reason": "RE3MR Customs v1.1E: reviewed named exit symbol / leader; per-image display only."
+          }
+        ]
+      },
+      "92e7412193276c1044299b51d930440cdab835e4": {
+        "file": "customs-classic-render.png",
+        "point": [
+          100,
+          520
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only.",
+        "alternates": [
+          {
+            "file": "customs-web-render.png",
+            "point": [
+              53,
+              581
+            ],
+            "reason": "RE3MR Customs v1.1E: reviewed named exit symbol / leader; per-image display only."
+          }
+        ]
+      },
+      "1e7baccc265b49195aead2e783779cbca83d73f3": {
+        "file": "customs-classic-render.png",
+        "point": [
+          1090,
+          923
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only.",
+        "alternates": [
+          {
+            "file": "customs-web-render.png",
+            "point": [
+              975,
+              961
+            ],
+            "reason": "RE3MR Customs v1.1E: reviewed named exit symbol / leader; per-image display only."
+          }
+        ]
+      },
+      "ad8fc418508df45199927afc5ea8c981337ecd64": {
+        "file": "customs-classic-render.png",
+        "point": [
+          1367,
+          280
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only."
+      },
+      "6eee3e566de0b079cd76f204d297ba954b301e8c": {
+        "file": "customs-classic-render.png",
+        "point": [
+          1407,
+          749
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only."
+      },
+      "c9e36de4f1b9f73f4698b5ba46135a1e0aafb434": {
+        "file": "customs-classic-render.png",
+        "point": [
+          1034,
+          550
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only."
+      },
+      "fc4876c616edf234b1b0b75fb02fce784e54a6c2": {
+        "file": "customs-classic-render.png",
+        "point": [
+          2014,
+          375
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only.",
+        "alternates": [
+          {
+            "file": "customs-web-render.png",
+            "point": [
+              1926,
+              568
+            ],
+            "reason": "RE3MR Customs v1.1E: reviewed named exit symbol / leader; per-image display only."
+          }
+        ]
+      },
+      "f865b04a5d4c6b10d92f8783b51b0b486f55cf79": {
+        "file": "customs-classic-render.png",
+        "point": [
+          767,
+          478
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only."
+      },
+      "74840d2d5d9c332e466148e94be1ab4ef0fb3ac4": {
+        "file": "customs-classic-render.png",
+        "point": [
+          422,
+          970
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only.",
+        "alternates": [
+          {
+            "file": "customs-web-render.png",
+            "point": [
+              392,
+              954
+            ],
+            "reason": "RE3MR Customs v1.1E: reviewed named exit symbol / leader; per-image display only."
+          }
+        ]
+      },
+      "bf421e259c2e851b159401432318bcca326b16d5": {
+        "file": "customs-classic-render.png",
+        "point": [
+          1716,
+          601
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only.",
+        "alternates": [
+          {
+            "file": "customs-web-render.png",
+            "point": [
+              1573,
+              735
+            ],
+            "reason": "RE3MR Customs v1.1E: reviewed named exit symbol / leader; per-image display only."
+          }
+        ]
+      },
+      "46979e6dd937e83470b013382282919388a07f8c": {
+        "file": "customs-classic-render.png",
+        "point": [
+          1605,
+          168
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only.",
+        "alternates": [
+          {
+            "file": "customs-web-render.png",
+            "point": [
+              1586,
+              354
+            ],
+            "reason": "RE3MR Customs v1.1E: reviewed named exit symbol / leader; per-image display only."
+          }
+        ]
+      },
+      "973dfce3d353b26fe9b3e9373bd4536d26fffc05": {
+        "file": "customs-classic-render.png",
+        "point": [
+          137,
+          891
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only.",
+        "alternates": [
+          {
+            "file": "customs-web-render.png",
+            "point": [
+              119,
+              841
+            ],
+            "reason": "RE3MR Customs v1.1E: reviewed named exit symbol / leader; per-image display only."
+          }
+        ]
+      },
+      "500734adcba6b80cc42b3ca3f4884f89aceffca0": {
+        "file": "customs-classic-render.png",
+        "point": [
+          339,
+          964
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only."
+      },
+      "f57705238de721e427d8ea262f7226f804e88726": {
+        "file": "customs-classic-render.png",
+        "point": [
+          219,
+          339
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only.",
+        "alternates": [
+          {
+            "file": "customs-web-render.png",
+            "point": [
+              134,
+              419
+            ],
+            "reason": "RE3MR Customs v1.1E: reviewed named exit symbol / leader; per-image display only."
+          }
+        ]
+      },
+      "f3f0171d1c8396a152e319f372c4e9d9df120e73": {
+        "file": "customs-classic-render.png",
+        "point": [
+          1877,
+          150
+        ],
+        "reason": "RE3MR Customs classic v1.1e: reviewed named exit symbol / leader; per-image display only.",
+        "alternates": [
+          {
+            "file": "customs-web-render.png",
+            "point": [
+              1883,
+              334
+            ],
+            "reason": "RE3MR Customs v1.1E: reviewed named exit symbol / leader; per-image display only."
+          }
+        ]
+      },
+      "0eedf7dfd9db21b60e216ebccbf52271a06cddf6": {
+        "file": "customs-web-render.png",
+        "point": [
+          1189,
+          415
+        ],
+        "reason": "RE3MR Customs v1.1E: reviewed named exit symbol / leader; per-image display only."
+      }
+    }
+  }
+}

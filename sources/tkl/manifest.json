@@ -1,0 +1,34 @@
+[
+  {
+    "floor": 0,
+    "file": "factory_underground.glb",
+    "url": "https://image.eftlibrary.com/eftlibrary/tkl_map/factory/main/factory_underground.glb",
+    "sha256": "be154cd670466b800bb4444311c6197deac482bd6500c8f915ca131fcc6e0f23",
+    "license": "CC BY-NC-ND 4.0",
+    "author": "TKL"
+  },
+  {
+    "floor": 1,
+    "file": "factory_first_floor.glb",
+    "url": "https://image.eftlibrary.com/eftlibrary/tkl_map/factory/main/factory_first_floor.glb",
+    "sha256": "6e1aa474da241bc6232fbd03c570e9280894143c062ef678271c0ed4bc45415f",
+    "license": "CC BY-NC-ND 4.0",
+    "author": "TKL"
+  },
+  {
+    "floor": 2,
+    "file": "factory_second_floor.glb",
+    "url": "https://image.eftlibrary.com/eftlibrary/tkl_map/factory/main/factory_second_floor.glb",
+    "sha256": "eb273c6c86864e1c31b44aee930bb8f3292207619b0eaf3a2fde1ec318ff8b03",
+    "license": "CC BY-NC-ND 4.0",
+    "author": "TKL"
+  },
+  {
+    "floor": 3,
+    "file": "factory_third_floor.glb",
+    "url": "https://image.eftlibrary.com/eftlibrary/tkl_map/factory/main/factory_third_floor.glb",
+    "sha256": "86d3bda2d776f193e1dda8c2766175a626075c2f727cc6af4f033c7fdce033f4",
+    "license": "CC BY-NC-ND 4.0",
+    "author": "TKL"
+  }
+]

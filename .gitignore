@@ -1,0 +1,26 @@
+# Local build outputs and dependencies
+/cache/
+/dist/
+/releases/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Historical scratch files and local screenshots/reports
+/backups/
+/work-*/
+/work-*.py
+/*.json
+/*.png
+
+# Local credentials and editor state
+.env
+.env.*
+!.env.example
+*.p12
+*.pfx
+*.pem
+*.key
+.idea/
+.vscode/
